@@ -24,7 +24,7 @@ jobs:
         run: |
           aws cloudformation deploy \
           --stack-name ec2-stack \
-          --template-file cloudformation/ec2-stack.yml \
+          --template-file templates/ec2-stack.yml \
           --parameter-overrides \
           KeyPairName=${{ secrets.KEYPAIR_NAME }} \
           --capabilities CAPABILITY_NAMED_IAM
